@@ -6,6 +6,34 @@
  */
 
 public class NaturalNumber extends ArbitraryWholeNumber {
+    /**
+     * default class constructor
+     *
+     */
+    public NaturalNumber() {
+    }
+
+    /**
+     * constructor
+     *
+     * @param digits - byte array Arbitrary Whole Number digits
+     */
+    public NaturalNumber(byte[] digits) {
+        setDigits(digits);
+        setNegative(false);
+    }
+
+    /**
+     * constructor
+     *
+     * @param number - number string. for example: "-6543000"
+     */
+    public NaturalNumber(String number) throws Exception{
+        super(number);
+        if (number.charAt(0) == '-') {
+            throw new Exception("NaturalNumber cannot be negative.");
+        }
+    }
 
     /**
      * overrides the base class's setNegative method

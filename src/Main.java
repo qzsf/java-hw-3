@@ -1,9 +1,9 @@
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         System.out.println("Hello world!");
         ArbitraryWholeNumber wn = new ArbitraryWholeNumber("-006543000");
         System.out.println(wn);
-        ArbitraryFloatingPointNumber fpn = new ArbitraryFloatingPointNumber("-65.43000");
+        ArbitraryFloatingPointNumber fpn = new ArbitraryFloatingPointNumber("-065.43000");
         System.out.println(fpn);
 
         System.out.println("");
@@ -50,6 +50,22 @@ public class Main {
         System.out.println(nn1);
         System.out.println(nn2);
         System.out.println(nn2.add(nn1));
+
+        NaturalNumber nn3 = new NaturalNumber("012345");
+        System.out.println(nn3);
+
+        System.out.println("000000");
+        byte[] digits5 = {0,0,0,0,0,0};
+        ArbitraryFloatingPointNumber afpn = new ArbitraryFloatingPointNumber(digits5,true,3);
+        afpn.trimDigits(digits5);
+        System.out.println(afpn);
+
+        byte[] digits6 = {0,0,0,3,4,5,6,0,0,0};
+        byte[] digits7 = {3,4,5,6};
+        ArbitraryFloatingPointNumber afpn1 = new ArbitraryFloatingPointNumber(digits6,true,5);
+        ArbitraryFloatingPointNumber afpn2 = new ArbitraryFloatingPointNumber(digits7,true,2);
+        System.out.println(afpn1.equals(afpn2));
+
     }
 
 }

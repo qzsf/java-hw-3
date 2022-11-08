@@ -19,7 +19,18 @@ public class ArbitraryWholeNumber {
     }
 
     /**
-     * class constructor
+     * constructor
+     *
+     * @param digits - byte array Arbitrary Whole Number digits
+     * @param isNegative - boolean for isNegative
+     */
+    public ArbitraryWholeNumber(byte[] digits, boolean isNegative) {
+        setDigits(digits);
+        setNegative(isNegative);
+    }
+
+    /**
+     * constructor
      *
      * @param number - number string. for example: "-6543000"
      */
@@ -77,7 +88,7 @@ public class ArbitraryWholeNumber {
      *
      * @return boolean
      */
-    public boolean compareValue(byte[] val1, byte[] val2) {
+    public boolean compareValues(byte[] val1, byte[] val2) {
         byte[] first;
         byte[] second;
         // val1 and val2 can be different in length.
@@ -116,9 +127,9 @@ public class ArbitraryWholeNumber {
         if (!(o instanceof ArbitraryWholeNumber))
             return false;
         ArbitraryWholeNumber awn = (ArbitraryWholeNumber) o;
-        // return true if both whole numbers has the same +/- sign
+        // return true if both whole numbers have the same +/- sign
         // and value of digits are equal. else return false.
-        return isNegative == awn.getIsNegative() && compareValue(digits, awn.digits);
+        return isNegative == awn.getIsNegative() && compareValues(digits, awn.digits);
     }
 
     /**
@@ -149,7 +160,7 @@ public class ArbitraryWholeNumber {
             sb.append('0');
         }
 
-        return sign + sb.toString();
+        return sign + sb;
     }
 
 }

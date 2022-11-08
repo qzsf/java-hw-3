@@ -1,6 +1,4 @@
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.params.shadow.com.univocity.parsers.common.TextParsingException;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 class NaturalNumberTest {
@@ -8,13 +6,14 @@ class NaturalNumberTest {
     @Test
     public void addNaturalNumberTest() {
         // setup
-        NaturalNumber nn1 = new NaturalNumber();
-        NaturalNumber nn2 = new NaturalNumber();
-        NaturalNumber sum = new NaturalNumber();
         byte[] digits1 = {5, 4, 3, 2, 1, 6};
         byte[] digits2 = {5, 4, 3, 2, 1, 7};
-        nn1.setDigits(digits1);
-        nn2.setDigits(digits2);
+        NaturalNumber nn1 = new NaturalNumber(digits1);
+        NaturalNumber nn2 = new NaturalNumber(digits2);
+        NaturalNumber sum;
+
+//        nn1.setDigits(digits1);
+//        nn2.setDigits(digits2);
 
         // execute
         sum = nn1.add(nn2);
