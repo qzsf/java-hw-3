@@ -37,6 +37,7 @@ public class Main {
 //        nn1.setNegative(true);
         System.out.println(nn1);
 
+
         byte a = 5;
         byte b = 6;
         byte s = (byte) (a + b);
@@ -44,12 +45,13 @@ public class Main {
 
         System.out.println("NaturalNumber add");
         NaturalNumber nn2 = new NaturalNumber();
-        byte[] digits4 = {5, 4, 3, 2, 1, 6, 1};
+        byte[] digits4 = {5, 4, 3, 2, 1, 6, 0};
         nn2.setNegative(true);
         nn2.setDigits(digits4);
         System.out.println(nn1);
         System.out.println(nn2);
         System.out.println(nn2.add(nn1));
+        System.out.println(nn2.equals(nn1));
 
         NaturalNumber nn3 = new NaturalNumber("012345");
         System.out.println(nn3);
@@ -60,11 +62,31 @@ public class Main {
         afpn.trimDigits(digits5);
         System.out.println(afpn);
 
-        byte[] digits6 = {0,0,0,3,4,5,6,0,0,0};
+        byte[] digits6 = {0,0,0,3,4,5,6};
         byte[] digits7 = {3,4,5,6};
         ArbitraryFloatingPointNumber afpn1 = new ArbitraryFloatingPointNumber(digits6,true,5);
         ArbitraryFloatingPointNumber afpn2 = new ArbitraryFloatingPointNumber(digits7,true,2);
         System.out.println(afpn1.equals(afpn2));
+
+        System.out.println("");
+        System.out.println("IntegerNumber");
+        IntegerNumber in1 = new IntegerNumber(digits6,true);
+        IntegerNumber in2 = new IntegerNumber(digits7,true);
+        System.out.println(in1.add(in2));
+        System.out.println(in1.equals(in2));
+
+        System.out.println("");
+        System.out.println("Rational Number");
+        IntegerNumber in3 = new IntegerNumber(digits6,false);
+        IntegerNumber in4 = new IntegerNumber(digits7,true);
+        RationalNumber rn1 = new RationalNumber(in3, in4);
+        System.out.println(rn1);
+
+        System.out.println("");
+        System.out.println("Real Number");
+        RealNumber realNumber1 = new RealNumber(digits6,false,5);
+        RealNumber realNumber2 = new RealNumber(digits7,false,2);
+        System.out.println(realNumber2.add(realNumber1));
 
     }
 

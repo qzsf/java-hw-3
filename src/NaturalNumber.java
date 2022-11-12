@@ -54,8 +54,8 @@ public class NaturalNumber extends ArbitraryWholeNumber {
      * @return NaturalNumber
      */
     public NaturalNumber add(NaturalNumber nn) {
-        byte[] digits1;
-        byte[] digits2;
+        byte[] digits1;     // shorter digits
+        byte[] digits2;     // longer digits
         byte[] sumDigits;
         if (this.getDigits().length <= nn.getDigits().length) {
             digits1 = this.getDigits();
@@ -65,6 +65,7 @@ public class NaturalNumber extends ArbitraryWholeNumber {
             digits1 = nn.getDigits();
         }
 
+        // initialize the sum digits
         sumDigits = new byte[digits2.length + 1];
         for (int i = 0; i < digits1.length; i++) {
             sumDigits[i] = (byte) (digits1[i] + digits2[i] + sumDigits[i]);
@@ -73,7 +74,7 @@ public class NaturalNumber extends ArbitraryWholeNumber {
                 sumDigits[i + 1] = 1;
             }
         }
-        //
+        // do the plus for the longer part since the two numbers can have different length
         for (int i = digits1.length; i < digits2.length; i++) {
             sumDigits[i] = (byte) (digits2[i] + sumDigits[i]);
             if (sumDigits[i] > 9) {
