@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7666bf75-33df-47b6-8ea0-acf500c3800d" name="Changes" comment="update ArbitraryFloatingPointNumber's compareValues method.">
+    <list default="true" id="7666bf75-33df-47b6-8ea0-acf500c3800d" name="Changes" comment="done integer, natural number, rational number and real number">
+      <change afterPath="$PROJECT_DIR$/test/ComplexNumberTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/GaussianIntegerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/IntegerNumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/IntegerNumber.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/NaturalNumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NaturalNumber.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RationalNumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RationalNumber.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RealNumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RealNumber.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ComplexNumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ComplexNumber.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GaussianInteger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GaussianInteger.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,8 +17,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -63,6 +62,23 @@
       <recent name="" />
     </key>
   </component>
+  <component name="RunManager">
+    <configuration name="ComplexNumberTest.toStringComplexNumberTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Project3" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ComplexNumberTest" />
+      <option name="METHOD_NAME" value="toStringComplexNumberTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.ComplexNumberTest.toStringComplexNumberTest" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -86,7 +102,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667886430988</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="done integer, natural number, rational number and real number">
+      <created>1668276569930</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1668276569930</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -103,7 +126,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit" />
     <MESSAGE value="update ArbitraryFloatingPointNumber's compareValues method." />
-    <option name="LAST_COMMIT_MESSAGE" value="update ArbitraryFloatingPointNumber's compareValues method." />
+    <MESSAGE value="done integer, natural number, rational number and real number" />
+    <option name="LAST_COMMIT_MESSAGE" value="done integer, natural number, rational number and real number" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
